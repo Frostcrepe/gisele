@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> morianne's art gallery</title>
+        <link rel="stylesheet" href="imageart.css">
+    </head>
+    <body style = "background-color:black;">
+        <div color = "white">
+            <h1 style="color:rgb(255, 234, 0);"> MY ART gallery </h1>
+            <br>
+            <hr color="white"><br>
+        </div>
+                
+        <div class="full-image" id="fullimageBox">
+            <img  src= "image/potrait_study_28des.jpg" id="fullimage">
+            <span onclick="closefullImg()">x</span>
+        </div>
+        <div class="img-gallery">
+            <img class="potrait1"    src= "image/potrait_study_28des.jpg" width="2000px" height="2000px"      onclick="openfullImg(this.src)">
+            <img class="mori"        src= "image/rose.jpg"                                          onclick="openfullImg(this.src)">
+            <img class="ren"         src= "image/rencea.jpg"                                        onclick="openfullImg(this.src)">
+            <img class="purplewitch" src= "image/witch.jpg"                                         onclick="openfullImg(this.src)">
+            <img class="violin"      src= "image/playing a violin.jpg" alt="lorena"                 onclick="openfullImg(this.src)">
+            <img class="food"        src= "image/cookies.jpg" alt="sweet-food"                      onclick="openfullImg(this.src)">
+            <img class="anatomy"     src= "image/hand.jpg"   width="25px"                           onclick="openfullImg(this.src)">
+            <img class="anatomy"     src= "image/art study 1.jpg"   width="25px"                           onclick="openfullImg(this.src)">
+        </div>
+                
+        <script>
+            var fullimageBox = document.getElementById("fullimageBox");
+            var fullimage = document.getElementById("fullimage");
+
+            function openfullImg(pic) {
+                fullimageBox.style.display = "flex";
+                fullimage.src = pic;
+            }
+            function closefullImg() {
+                fullimageBox.style.display = "none";
+            }
+        </script>
+    </body>
+</html>
